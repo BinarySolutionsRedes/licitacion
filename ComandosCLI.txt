@@ -1,0 +1,355 @@
+//Lista de comandos CLI para router uno:
+
+Router>enable
+Router#conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+Router(config)#interface f7/0
+Router(config-if)#ip address 130.100.80.1 255.255.252.0
+Router(config-if)#no shotdown
+^
+% Invalid input detected at '^' marker.
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet7/0, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet7/0, changed state to up
+
+Router(config-if)#exit
+Router(config)#interface f8/0
+Router(config-if)#ip address 130.100.24.1 255.255.248.0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet8/0, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet8/0, changed state to up
+
+Router(config-if)#exit
+Router(config)#interface f9/0
+Router(config-if)#ip address 130.100.98.1 255.255.248.0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet9/0, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet9/0, changed state to up
+
+Router(config-if)#exit
+Router(config)#interface f0/0
+Router(config-if)#ip address 130.100.88.1 255.255.252.0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+
+Router(config-if)#exit
+Router(config)#interface f1/0
+Router(config-if)#ip address 130.100.112.1 255.255.252.0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet1/0, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0, changed state to up
+
+Router(config-if)#exit
+Router(config)#interface f6/0
+Router(config-if)#ip address 130.100.64.1 255.255.252.0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet6/0, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet6/0, changed state to up
+
+Router(config-if)#exit
+Router(config)#
+Router con0 is now available
+Press RETURN to get started.
+
+//Switch Toluca:
+Switch>enable
+Switch#conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+Switch(config)#interface vlan1
+Switch(config-if)#ip address
+% Incomplete command.
+Switch(config-if)#ip address 130.100.83.35 255.255.252.0
+Switch(config-if)#no shutdown
+Switch(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+
+Switch(config-if)#exit
+Switch(config)#ip def
+Switch(config)#ip default-gateway 130.100.87.255
+Switch(config)#do write
+Building configuration...
+[OK]
+Switch(config)#
+
+//Switch  Nueva tienda 1:
+Switch>enable
+Switch#conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+Switch(config)#interface vlan1
+Switch(config-if)#ip address
+% Incomplete command.
+Switch(config-if)#ip address 130.100.83.35 255.255.252.0
+Switch(config-if)#no shutdown
+Switch(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+Switch(config-if)#exit
+Switch(config)#ip def
+Switch(config)#ip default-gateway 130.100.87.255
+Switch(config)#do write
+Building configuration...
+[OK]
+Switch(config)#
+
+//Switch D.F:
+Switch>enable
+Switch#conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+Switch(config)#interface vlan1
+Switch(config-if)#ip address 130.100.52.80 255.255.248.0
+Switch(config-if)#no shutdown+
+^
+% Invalid input detected at '^' marker.
+Switch(config-if)#no shutdown
+Switch(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+Switch(config-if)#exit
+Switch(config)#ip def
+Switch(config)#ip default-gateway 130.100.35.255
+Switch(config)#do write
+Building configuration...
+[OK]
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+Switch#
+
+//Switch Puebla:
+ Switch>enable
+Switch#conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+Switch(config)#interface vlan1
+Switch(config-if)#ip address 130.100.91.35 255.255.252.0
+Switch(config-if)#no shutdown
+Switch(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+Switch(config-if)#exit
+Switch(config)#ip def
+Switch(config)#ip default-gateway 130.100.95.255
+Switch(config)#do write
+Building configuration...
+[OK]
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+Switch#
+
+
+//Switch Nueva Tienda 2:
+Switch>enable
+Switch#conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+Switch(config)#interface vlan1
+Switch(config-if)#ip address 130.100.113.245 255.255.252.0
+Switch(config-if)#no shutdown
+Switch(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+Switch(config-if)#exit
+Switch(config)#ip def
+Switch(config)#ip default-gateway 130.100.118.255
+Switch(config)#do write
+Building configuration...
+[OK]
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+Switch#
+
+
+//Switch Queretaro:
+
+Switch>enable
+Switch#conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+Switch(config)#interface vlan1
+Switch(config-if)#ip address 130.100.67.135 255.255.252.0
+Switch(config-if)#no shutdown
+Switch(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+Switch(config-if)#exit
+Switch(config)#ip def
+Switch(config)#ip default-gateway 130.100.71.255
+Switch(config)#do write
+Building configuration...
+[OK]
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+Switch#
+
+//Router 2:
+Router>enable
+Router#conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+Router(config)#interface f7/0
+Router(config-if)#ip address 130.100.112.1 255.255.252.0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet7/0, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet7/0, changed state to up
+Router(config-if)#exit
+Router(config)#interface f8/0
+Router(config-if)#ip address 130.100.72.1 255.255.252.0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet8/0, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet8/0, changed state to up
+Router(config-if)#exit
+Router(config)#interface f0/0
+Router(config-if)#ip address 130.100.101.1 255.255.252.0
+Router(config-if)#no shutdown
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+Router(config-if)#exit
+Router(config)#interface f1/0
+Router(config-if)#ip address 130.100.32.1 255.255.248.0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet1/0, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0, changed state to up
+Router(config-if)#exit
+Router(config)#interface f6/0
+Router(config-if)#ip address 130.100.8.1 255.255.248.0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet6/0, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet6/0, changed state to up
+Router(config-if)#exit
+
+//Switch Chiapas:
+Switch>enable
+Switch#conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+Switch(config)#interface vlan1
+Switch(config-if)#ip address 130.100 113.245 255.255.252.0
+^
+% Invalid input detected at '^' marker.
+Switch(config-if)#ip address 130.100 113.245 255.255.252.0
+^
+% Invalid input detected at '^' marker.
+Switch(config-if)#ip address 130.100.113.245 255.255.252.0
+Switch(config-if)#no shutdown
+Switch(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+Switch(config-if)#exit
+Switch(config)#ip def
+Switch(config)#ip default-gateway 130.100.118.255
+Switch(config)#do write
+Building configuration...
+[OK]
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+Switch#
+
+//Switch Cancun:
+Switch>enable 
+Switch#conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+Switch(config)#interface vlan1
+Switch(config-if)#ip address 130.100.72.1 255.255.252.0
+Switch(config-if)#no shudown
+^
+% Invalid input detected at '^' marker.
+Switch(config-if)#no shutown
+^
+% Invalid input detected at '^' marker.
+Switch(config-if)#no shutdown
+Switch(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+%IP-4-DUPADDR: Duplicate address 130.100.72.1 on Vlan1, sourced by 0090.0CB2.EE37
+Switch(config-if)#exit
+Switch(config)#ip def
+Switch(config)#ip default-gateway 130.100.79.255
+Switch(config)#do write
+Building configuration...
+[OK]
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+Switch#
+
+//Switch Oaxaca:
+Switch>enable
+Switch#conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+Switch(config)#interface vlan1
+Switch(config-if)#ip address 130.100.106.140 255.255.252.0
+Switch(config-if)#no shotdown
+^
+% Invalid input detected at '^' marker.
+Switch(config-if)#no shutdown
+
+Switch(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+Switch(config-if)#exit
+Switch(config)#ip def
+Switch(config)#ip default-gateway 130.100.111.255
+Switch(config)#do write
+Building configuration...
+[OK]
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+Switch#
+
+//Switch Qintana Roo:
+Switch>enable
+Switch#conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+Switch(config)#interface vlan1
+Switch(config-if)#ip address 130.100.37.138 255.255.248.0
+Switch(config-if)#no shutdown
+Switch(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+Switch(config-if)#exit
+Switch(config)#ip def
+Switch(config)#ip default-gateway 130.100.39.255
+Switch(config)#do write
+Building configuration...
+[OK]
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+Switch#
+
+
+//Switch  Nueva Tienda 3:
+Switch>enable
+Switch#conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+Switch(config)#interface vlan1
+Switch(config-if)#ip address 130.100.14.236 255.255.248.0
+Switch(config-if)#no shutdown
+Switch(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+Switch(config-if)#exit
+Switch(config)#ip conf
+Switch(config)#ip def
+Switch(config)#ip default-gateway 130.100.15.255
+Switch(config)#do write
+Building configuration...
+[OK]
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+Switch#
